@@ -1,0 +1,14 @@
+{
+  "name": "nanolisp",
+  "version": "1.0.0",
+  "description": "Embeddable Lisp for JS projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lisp"
+  ],
+  "author": "Quentin Leonetti <q.leonetti@gmail.com>",
+  "license": "ISC"
+}
