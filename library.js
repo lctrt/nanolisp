@@ -118,10 +118,12 @@ module.exports = function Library (includes) {
   // Arrays
 
   this.map = async (fn, arr) => {
+    let res = [];
     for (let i = 0; i < arr.length; i++) {
       const arg = arr[i]
-      await fn(arg)
+      res.push(await fn(arg));
     }
+    return res;
   }
 
   this.filter = (fn, arr) => {
@@ -232,10 +234,6 @@ module.exports = function Library (includes) {
 
   this.js = () => { // Javascript interop.
     return window
-  }
-
-  this.on = (event, f) => { // Triggers on event.
-    ronin.bind(event, f)
   }
 
   this.test = (name, a, b) => {
