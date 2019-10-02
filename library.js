@@ -121,7 +121,7 @@ module.exports = function Library (includes) {
     let res = [];
     for (let i = 0; i < arr.length; i++) {
       const arg = arr[i]
-      res.push(await fn(arg));
+      res.push(await fn(arr[i],i));
     }
     return res;
   }
